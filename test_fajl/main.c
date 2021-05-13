@@ -1,25 +1,55 @@
 /**
-* @file main.c
-* @brief opis
-* @author Marija Nešiæ
-* @date 11-5-2021
-* @version 1.0
-*/
+ * @file main.c
+ * @brief Aplikacija koja implementira ogranicen broj treptanja diode
+ * @author Ime Prezime
+ * @date 14-03-2021
+ * @version 1.0
+ */
 
-#include <avr/io.h>
-#include <util/delay.h>
+#include "pin.h"
+#include "timer0.h"
+#include "pulsing.h"
 
+/// Makro za selektovanje pina na koji je povezana dioda
+#define DIODE_PIN 5
+
+/// Makro za podesavanje periode u brzom rezimu treptanja
+#define FAST 200
+/// Makro za podesavanje periode u sporom rezimu treptanja
+#define SLOW 1000
+
+/// Makro za podesavanje broja brzih treptaja
+#define FAST_REPETITIONS 15
+/// Makro za podesavanje broja sporih treptaja
+#define SLOW_REPETITIONS 3
+
+/**
+ * main - funkcija koja implementiran glavni deo aplikacije
+ * @return Nema povratnu vrednost
+ */
 int main()
-   {
-	DDRB |=1<<5;//PB5 je izlaz
+{
+    unsigned long period = 1000; 	// Period jednog treptaja
+    unsigned char repetitions = 5; 	// Broj treptaja
 
-	while(1)
-	{
-		PORTB |=1<<5;//LED ON
-		_delay_ms(1000);//pauza 1s
-		PORTB &=~(1<<5);//LED OFF
-		_delay_ms(1000);//pauza 1s
-	}
-	return 0;
-   }
+    // Inicijalizacija
+    pinInit(PORT_B, DIODE_PIN, OUTPUT);
+    timer0InteruptInit();
 
+    // Glavna petlja
+    while (1)
+    {
+        // Brzo treptanje
+    	pinPulsing(PORT_B, DIODE_PIN, FAST, FAST_REPETITIONS);
+
+    	// Sporo treptanje
+		pinPulsing(PORT_B, DIODE_PIN, SLOW, SLOW_REPETITIONS);
+
+        // Kraj
+        while (1)
+        ;
+
+    }
+
+    return 0;
+}
