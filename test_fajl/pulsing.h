@@ -1,9 +1,9 @@
 #ifndef PULSING_H_
 #define PULSING_H_
 
-#include "pin.h"
 #include "timer0.h"
 #include "utils.h"
+#include "../pin_driver/pin.h"
 
 /**
  * pinPulsing - Funkcija koja implementira num_of_repetitions perioda podizanja i spustanja vrednosti na pinu

@@ -6,9 +6,10 @@
  * @version 1.0
  */
 
-#include "pin.h"
+//#include "pin.h"
 #include "timer0.h"
 #include "pulsing.h"
+#include "../pin_driver/pin.h"
 
 /// Makro za selektovanje pina na koji je povezana dioda
 #define DIODE_PIN 5
@@ -27,6 +28,7 @@
  * main - funkcija koja implementiran glavni deo aplikacije
  * @return Nema povratnu vrednost
  */
+
 int main()
 {
     unsigned long period = 1000; 	// Period jednog treptaja
