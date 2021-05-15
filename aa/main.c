@@ -1,12 +1,15 @@
 #include <stdlib.h>
 #include "../usart/usart.h"
-#include <util/delay.h>
+#include "../TIMER0/timer0.h"
+//#include <util/delay.h>
 #include <stdint.h>
 
 int main()
 {
+	unsigned long n=100;
 	int8_t str [64];
 	int16_t number;
+	timer0InteruptInit();
     usartInit(9600);
 
     while(1)
@@ -14,7 +17,8 @@ int main()
     	usartPutString("Uneti broj: \r\n ");
     	while(!usartAvailable())
     		;
-    	_delay_ms(100);
+    	timer0DelayMs(n);
+
 
     	number = usartParseInt();
 
