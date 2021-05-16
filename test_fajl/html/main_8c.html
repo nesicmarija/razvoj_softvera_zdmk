@@ -39,21 +39,73 @@ $(function() {
 <div id="main-nav"></div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">main.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>opis  
+<p>Aplikacija koja implementira ogranicen broj treptanja diode.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;avr/io.h&gt;</code><br />
-<code>#include &lt;util/delay.h&gt;</code><br />
-</div><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>opis </p>
-<dl class="section author"><dt>Author</dt><dd>Marija Nešiæ </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>11-5-2021 </dd></dl>
+<div class="textblock"><code>#include &quot;timer0.h&quot;</code><br />
+<code>#include &quot;pulsing.h&quot;</code><br />
+<code>#include &quot;../pin_driver/pin.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a01a38dd4c581bb40a916600e7f32f18e"><td class="memItemLeft" align="right" valign="top"><a id="a01a38dd4c581bb40a916600e7f32f18e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a01a38dd4c581bb40a916600e7f32f18e">DIODE_PIN</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:a01a38dd4c581bb40a916600e7f32f18e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makro za selektovanje pina na koji je povezana dioda. <br /></td></tr>
+<tr class="separator:a01a38dd4c581bb40a916600e7f32f18e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8091c2bcff55cbe0a4a145fd5fb7c22d"><td class="memItemLeft" align="right" valign="top"><a id="a8091c2bcff55cbe0a4a145fd5fb7c22d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a8091c2bcff55cbe0a4a145fd5fb7c22d">FAST</a>&#160;&#160;&#160;200</td></tr>
+<tr class="memdesc:a8091c2bcff55cbe0a4a145fd5fb7c22d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makro za podesavanje periode u brzom rezimu treptanja. <br /></td></tr>
+<tr class="separator:a8091c2bcff55cbe0a4a145fd5fb7c22d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5da43425fff36347c69fc3c090e42c6c"><td class="memItemLeft" align="right" valign="top"><a id="a5da43425fff36347c69fc3c090e42c6c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a5da43425fff36347c69fc3c090e42c6c">SLOW</a>&#160;&#160;&#160;1000</td></tr>
+<tr class="memdesc:a5da43425fff36347c69fc3c090e42c6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makro za podesavanje periode u sporom rezimu treptanja. <br /></td></tr>
+<tr class="separator:a5da43425fff36347c69fc3c090e42c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae70a242dacd886f6e5ee8b03d1f7dbcf"><td class="memItemLeft" align="right" valign="top"><a id="ae70a242dacd886f6e5ee8b03d1f7dbcf"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ae70a242dacd886f6e5ee8b03d1f7dbcf">FAST_REPETITIONS</a>&#160;&#160;&#160;15</td></tr>
+<tr class="memdesc:ae70a242dacd886f6e5ee8b03d1f7dbcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makro za podesavanje broja brzih treptaja. <br /></td></tr>
+<tr class="separator:ae70a242dacd886f6e5ee8b03d1f7dbcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab32eaa40c1f40f1594f108a8dea1fddd"><td class="memItemLeft" align="right" valign="top"><a id="ab32eaa40c1f40f1594f108a8dea1fddd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ab32eaa40c1f40f1594f108a8dea1fddd">SLOW_REPETITIONS</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memdesc:ab32eaa40c1f40f1594f108a8dea1fddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makro za podesavanje broja sporih treptaja. <br /></td></tr>
+<tr class="separator:ab32eaa40c1f40f1594f108a8dea1fddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Aplikacija koja implementira ogranicen broj treptanja diode. </p>
+<dl class="section author"><dt>Author</dt><dd>Ime Prezime </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>14-03-2021 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>main - funkcija koja implementiran glavni deo aplikacije </p><dl class="section return"><dt>Returns</dt><dd>Nema povratnu vrednost </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

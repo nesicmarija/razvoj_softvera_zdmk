@@ -6,21 +6,17 @@ Default Window=main
 Default topic=index.html
 Index file=index.hhk
 Language=0x409 English (United States)
-Title=Test123
+Title=Moj projekat
 
 [WINDOWS]
-main="Test123","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
+main="Moj projekat","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
 
 [FILES]
-pulsing_8h_source.html
-timer0_8h_source.html
-utils_8h_source.html
 main_8c.html
 index.html
 files.html
 globals.html
 globals_func.html
-globals_defs.html
 tab_a.png
 tab_b.png
 tab_h.png

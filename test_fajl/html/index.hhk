@@ -4,6 +4,33 @@
 <param name="FrameName" value="right">
 </OBJECT>
 <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8c.html#a01a38dd4c581bb40a916600e7f32f18e"><param name="Name" value="DIODE_PIN"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8c.html#a8091c2bcff55cbe0a4a145fd5fb7c22d"><param name="Name" value="FAST"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8c.html#ae70a242dacd886f6e5ee8b03d1f7dbcf"><param name="Name" value="FAST_REPETITIONS"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8c.html"><param name="Name" value="main.c"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8c.html#a01a38dd4c581bb40a916600e7f32f18e"><param name="Name" value="DIODE_PIN"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8c.html"><param name="Name" value="main.c"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8c.html#a8091c2bcff55cbe0a4a145fd5fb7c22d"><param name="Name" value="FAST"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8c.html"><param name="Name" value="main.c"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8c.html#ae70a242dacd886f6e5ee8b03d1f7dbcf"><param name="Name" value="FAST_REPETITIONS"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8c.html"><param name="Name" value="main.c"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4"><param name="Name" value="main"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8c.html"><param name="Name" value="main.c"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8c.html#a5da43425fff36347c69fc3c090e42c6c"><param name="Name" value="SLOW"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8c.html#ab32eaa40c1f40f1594f108a8dea1fddd"><param name="Name" value="main.c"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4"><param name="Name" value="main"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8c.html#a5da43425fff36347c69fc3c090e42c6c"><param name="Name" value="SLOW"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8c.html#ab32eaa40c1f40f1594f108a8dea1fddd"><param name="Name" value="SLOW_REPETITIONS"></OBJECT>
 </UL>
 </BODY>
 </HTML>
